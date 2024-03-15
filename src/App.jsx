@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Nav from './Components/navbar/Nav';
+import Faq from './Components/faq/Faq';
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+	return (
+		<>
+			<Nav />
+			<Faq />
+		</>
+	);
+};
 
-export default App
+export default App;
