@@ -1,12 +1,12 @@
-import React from 'react';
-import Nav from './Components/navbar/Nav';
-import Faq from './Components/faq/Faq';
+import Home from '../src/pages/home/Home';
+import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
 	return (
 		<>
-			<Nav />
-			<Faq />
+			<Routes>
+				<Route path='/' element={<Home />} />
+			</Routes>
 		</>
 	);
 };
