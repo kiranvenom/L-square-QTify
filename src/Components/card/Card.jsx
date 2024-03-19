@@ -2,7 +2,7 @@ import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip } from 'react-tooltip';
 import millify from 'millify';
 
-const Card = ({ data = 'fsd' }) => {
+const Card = ({ data }) => {
 	return (
 		<>
 			<Tooltip id='cardAlbums' />
