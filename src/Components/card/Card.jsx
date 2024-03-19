@@ -22,7 +22,8 @@ const Card = ({ data = 'fsd' }) => {
 						</div>
 						<div className='w-[71px] h-[23px] blackB rounded-[50px] mt-[6px] ml-[8px] whiteT flex justify-center items-center'>
 							<h2 className='text-[10px] mt-[2px]'>
-								{millify(data.follows)} Follows
+								{/* {millify(data.follows)} Follows */}
+								{data.follows} Follows
 							</h2>
 						</div>
 					</div>
