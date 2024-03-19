@@ -29,7 +29,7 @@ const Section = ({ title, route }) => {
 						<h1 className='text-[20px] font-[600]'>{title}</h1>
 						<h1
 							onClick={handleToggleShow}
-							className='text-[20px] greenT font-[600]'>
+							className='text-[20px] greenT font-[600] cursor-pointer'>
 							{showAll ? 'Collapse' : 'Show All'}
 						</h1>
 					</div>
@@ -67,38 +67,6 @@ const Section = ({ title, route }) => {
 							</Swiper>
 						</div>
 					)}
-
-					{/* <div className='flex gap-4 flex-wrap'>
-						{card.map((c) => (
-							<Card key={c.id} data={c} />
-						))}
-					</div> */}
-
-					{/* <div className='relative'>
-						<FaCircleChevronLeft
-							className='absolute top-[35%] left-[-1%] whiteB rounded-full cursor-pointer z-10 swiper-button-next'
-							size={32}
-							color='green'
-						/>
-						<FaCircleChevronRight
-							className='absolute top-[35%] right-[-1%] whiteB rounded-full cursor-pointer z-10 swiper-button-prev'
-							size={32}
-							color='green'
-						/>
-						<Swiper
-							slidesPerView={8}
-							navigation={{
-								nextEl: '.swiper-button-next',
-								prevEl: '.swiper-button-prev',
-							}}
-							modules={[Navigation]}>
-							{card.map((c) => (
-								<SwiperSlide key={c.id}>
-									<Card data={c} />
-								</SwiperSlide>
-							))}
-						</Swiper>
-					</div> */}
 				</div>
 			</div>
 		</>

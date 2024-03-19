@@ -9,6 +9,7 @@ const Home = () => {
 			<Nav />
 			<Hero />
 			<Section title='Top Albums' route={api.topAlbums} />
+			<Section title='New Albums' route={api.newAlbums} />
 		</>
 	);
 };
