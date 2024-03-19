@@ -9,18 +9,29 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 
+import Loading from '../loading/Loading';
+
 const Section = ({ title, route }) => {
 	let newTitle = title.split(' ');
 
-	const [card, setcard] = useState([]);
-	const [showAll, setshowAll] = useState(true);
+	const [card, setCard] = useState([]);
+	const [showAll, setShowAll] = useState(true);
+	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		getData(route).then((res) => setcard(res));
+		getData(route)
+			.then((res) => {
+				setCard(res);
+				setIsLoading(false);
+			})
+			.catch((error) => {
+				console.error('Error fetching data:', error);
+				setIsLoading(false);
+			});
 	}, []);
 
 	const handleToggleShow = () => {
-		setshowAll(!showAll);
+		setShowAll(!showAll);
 	};
 
 	return (
@@ -32,11 +43,13 @@ const Section = ({ title, route }) => {
 						<h1
 							onClick={handleToggleShow}
 							className='text-[20px] greenT font-[600] cursor-pointer'>
-							{showAll ? 'Collapse' : 'Show All'}
+							{showAll ? 'Collapse' : 'Show all'}
 						</h1>
 					</div>
 
-					{showAll ? (
+					{isLoading ? (
+						<Loading />
+					) : showAll ? (
 						<div className='flex gap-4 flex-wrap'>
 							{card.map((c) => (
 								<Card key={c.id} data={c} />
