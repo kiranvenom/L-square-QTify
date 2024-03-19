@@ -5,12 +5,12 @@ const Hero = () => {
 		<div className='w-full h-[40vh] blackB flex justify-center items-center'>
 			<div className='w-[50vw] whiteT flex items-center justify-center gap-8'>
 				<div className='text-center'>
-					<h1 className='text-[1.6rem] font-bold'>
+					<h2 className='text-[1.6rem] font-bold'>
 						100 Thousand Songs, ad-free
-					</h1>
-					<h1 className='text-[1.6rem] font-bold'>
+					</h2>
+					<h2 className='text-[1.6rem] font-bold'>
 						Over thousands podcast episodes
-					</h1>
+					</h2>
 				</div>
 
 				<div className='w-[212px] h-[212px]'>

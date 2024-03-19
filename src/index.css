@@ -46,3 +46,21 @@ body {
 .whiteT {
 	@apply text-[var(--third-color)];
 }
+
+::-webkit-scrollbar {
+	width: 10px;
+	background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(132, 132, 132);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(85, 85, 85);
+}
