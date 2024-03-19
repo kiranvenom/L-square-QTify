@@ -10,6 +10,8 @@ import 'swiper/css';
 import { Navigation } from 'swiper/modules';
 
 const Section = ({ title, route }) => {
+	let newTitle = title.split(' ');
+
 	const [card, setcard] = useState([]);
 	const [showAll, setshowAll] = useState(true);
 
@@ -24,8 +26,8 @@ const Section = ({ title, route }) => {
 	return (
 		<>
 			<div className='blackB whiteT'>
-				<div className='w-[1384px] m-auto '>
-					<div className='flex justify-between items-center mb-6'>
+				<div className='w-[1384px] m-auto'>
+					<div className='flex justify-between mb-4 pt-10'>
 						<h1 className='text-[20px] font-[600]'>{title}</h1>
 						<h1
 							onClick={handleToggleShow}
@@ -43,20 +45,20 @@ const Section = ({ title, route }) => {
 					) : (
 						<div className='relative'>
 							<FaCircleChevronLeft
-								className='absolute top-[35%] left-[-1%] whiteB rounded-full cursor-pointer z-10 swiper-button-next'
+								className={`absolute top-[35%] left-[-1%] whiteB rounded-full cursor-pointer z-10 next-${newTitle[0]}`}
 								size={32}
 								color='green'
 							/>
 							<FaCircleChevronRight
-								className='absolute top-[35%] right-[-0.5%] whiteB rounded-full cursor-pointer z-10 swiper-button-prev'
+								className={`absolute top-[35%] right-[-0.5%] whiteB rounded-full cursor-pointer z-10 prev-${newTitle[0]}`}
 								size={32}
 								color='green'
 							/>
 							<Swiper
 								slidesPerView={8}
 								navigation={{
-									nextEl: '.swiper-button-prev',
-									prevEl: '.swiper-button-next',
+									nextEl: `.prev-${newTitle[0]}`,
+									prevEl: `.next-${newTitle[0]}`,
 								}}
 								modules={[Navigation]}>
 								{card.map((c) => (
