@@ -43,7 +43,7 @@ const Section = ({ title, route }) => {
 						<h1
 							onClick={handleToggleShow}
 							className='text-[20px] greenT font-[600] cursor-pointer'>
-							{showAll ? 'Collapse' : 'Show All'}
+							{showAll ? <h3>Collapse</h3> : <h3>Show All</h3>}
 						</h1>
 					</div>
 
