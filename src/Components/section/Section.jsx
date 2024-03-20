@@ -15,7 +15,7 @@ const Section = ({ title, route }) => {
 	let newTitle = title.split(' ');
 
 	const [card, setCard] = useState([]);
-	const [showAll, setShowAll] = useState(true);
+	const [showAll, setShowAll] = useState(false);
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
