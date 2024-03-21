@@ -10,6 +10,7 @@ const Home = () => {
 			<Hero />
 			<Section title='Top Albums' route={api.topAlbums} />
 			<Section title='New Albums' route={api.newAlbums} />
+			<Section title='Songs' route={api.songs} type={true} />
 		</>
 	);
 };

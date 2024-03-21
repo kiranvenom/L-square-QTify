@@ -64,3 +64,7 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	background: rgb(85, 85, 85);
 }
+
+.active {
+	border-bottom: #34c94b 4px solid;
+}
