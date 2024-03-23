@@ -5,6 +5,7 @@ const allRoutes = {
 	newAlbums: 'https://qtify-backend-labs.crio.do/albums/new',
 	songs: 'https://qtify-backend-labs.crio.do/songs',
 	genres: 'https://qtify-backend-labs.crio.do/genres',
+	faq: 'https://qtify-backend-labs.crio.do/faq',
 };
 
 export async function getData(route) {

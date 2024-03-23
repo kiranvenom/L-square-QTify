@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
 import Accordian from '../accordian/Accordian';
-import data from '/src/data/data.js';
+import api, { getData } from '../../api/api';
 
 const Faq = () => {
 	const [qa, setqa] = useState([]);
 
 	useEffect(() => {
-		setqa(data);
+		getData(api.faq).then((res) => setqa(res.data));
 	}, []);
 
 	return (
-		<div className='blackB whiteT py-10'>
-			<div className='max-w-[1135px] h-[345px] m-auto flex items-center flex-col justify-between'>
-				<h2 className='font-bold text-4xl'>FAQs</h2>
+		<div className='blackB whiteT pt-10'>
+			<div className='max-w-[1135px] m-auto flex items-center flex-col justify-between'>
+				<h2 className='font-bold text-4xl mb-10'>FAQs</h2>
 
 				<div className='w-full'>
 					{qa.map((q) => (

@@ -49,7 +49,7 @@ const Section = ({ title, route, type = false }) => {
 	};
 
 	const handleGenre = (genreKey) => {
-		setActiveGenre(genreKey); // Update active genre
+		setActiveGenre(genreKey);
 		if (type) {
 			if (genreKey === 'all') {
 				setCard(originalCards);

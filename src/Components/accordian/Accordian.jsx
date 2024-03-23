@@ -10,11 +10,11 @@ const Accordian = ({ data }) => {
 
 	return (
 		<div className='w-full flex flex-col items-center m-4'>
-			<div className='w-1/2 whiteB blackT rounded-lg'>
+			<div className='w-[1135px] whiteB blackT rounded-lg'>
 				<div
 					className='border border-white flex justify-between items-center blackB whiteT p-4 rounded-lg cursor-pointer'
 					onClick={toggleAccordian}>
-					<h2>{data.questuion}</h2>
+					<h2>{data.question}</h2>
 					<IoIosArrowUp
 						size={28}
 						className='greenT '
